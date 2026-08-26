@@ -2,7 +2,7 @@
 
 A complete exploratory data analysis (EDA) project on the **IMDb Top 1000 Movies** dataset using Python, Pandas, NumPy, Matplotlib, and Seaborn.
 
-The project covers the full data-analysis workflow: understanding the dataset, cleaning and preprocessing the data, investigating business-style questions, and creating visualizations to communicate insights.
+The project follows an end-to-end data-analysis workflow: understanding the dataset, cleaning and preprocessing the data, investigating practical analytical scenarios, and creating visualizations to communicate insights.
 
 ## Project Objective
 
@@ -43,7 +43,7 @@ The raw dataset contains movie-level information including:
 - No_of_Votes
 - Gross
 
-The dataset is stored in the `data/` directory.
+The original dataset is stored in the `Raw_data/` directory. The cleaned dataset produced during the analysis is stored separately in `cleaned_data/` so that the original raw data remains unchanged.
 
 ## Project Structure
 
@@ -52,24 +52,27 @@ IMDb-Data-Analysis/
 │
 ├── README.md
 │
-├── notebooks/
-│   ├── 1_Understanding.ipynb
-│   ├── 2_Cleaning.ipynb
-│   ├── 3_Realtime_Scenario.ipynb
-│   └── 4_Data_Visualization.ipynb
+├── Raw_data/
+│   └── imdb_top_1000.csv
 │
-├── data/
-│   ├── imdb_top_1000.csv
+├── cleaned_data/
 │   └── imdb_cleaned.csv
 │
-└── images/
-    ├── Distribution of IMDb Ratings.png
-    ├── Distribution of Movie Certificates.png
-    ├── Genre with highest avg ratings.png
-    ├── Gross Revenue vs IMDb Rating.png
-    ├── Movie releases over the years.png
-    └── Top 10 Directors by movies.png
+└── notebook/
+    ├── 1_Understanding.ipynb
+    ├── 2_cleaning.ipynb
+    ├── 3_Realtime_Scenario.ipynb
+    └── 4_dataVisualization.ipynb
 ```
+
+### Directory Description
+
+| Directory/File | Purpose |
+|---|---|
+| `Raw_data/` | Stores the original, unmodified IMDb dataset |
+| `cleaned_data/` | Stores the cleaned dataset generated during preprocessing |
+| `notebook/` | Contains the Jupyter notebooks covering the analysis workflow |
+| `README.md` | Project documentation and overview |
 
 ## Analysis Workflow
 
@@ -87,6 +90,8 @@ Activities include:
 - Examining missing values
 - Understanding the distribution of important variables
 
+Notebook: `notebook/1_Understanding.ipynb`
+
 ### 2. Data Cleaning
 
 The raw dataset contains missing and inconsistent values that need to be addressed before analysis.
@@ -94,13 +99,15 @@ The raw dataset contains missing and inconsistent values that need to be address
 Cleaning activities include:
 
 - Identifying missing values using `isnull()`
-- Handling missing values according to column-specific rules
+- Handling missing values
 - Checking for duplicate records
 - Converting columns into appropriate data types
 - Cleaning numerical fields such as `Runtime`, `Released_Year`, and `Gross`
 - Preparing a cleaned dataset for analysis
 
-The cleaned dataset is saved separately so that the original raw data remains unchanged.
+The cleaned dataset is saved as `cleaned_data/imdb_cleaned.csv` while the original raw dataset remains unchanged.
+
+Notebook: `notebook/2_cleaning.ipynb`
 
 ### 3. Real-World Analysis Scenarios
 
@@ -113,6 +120,8 @@ The project applies the cleaned dataset to practical analytical questions, such 
 - How are IMDb ratings distributed?
 - Which movie certificates are most common?
 - What patterns can be observed across ratings, votes, revenue, and other movie attributes?
+
+Notebook: `notebook/3_Realtime_Scenario.ipynb`
 
 ### 4. Data Visualization
 
@@ -127,6 +136,8 @@ Examples include:
 - Gross revenue vs. IMDb rating
 - Top directors by number of movies
 
+Notebook: `notebook/4_dataVisualization.ipynb`
+
 ## Key Python Libraries
 
 ```python
@@ -138,7 +149,8 @@ import seaborn as sns
 
 ## Skills Demonstrated
 
-**Data Analysis**
+### Data Analysis
+
 - Exploratory Data Analysis (EDA)
 - Data cleaning and preprocessing
 - Missing-value analysis
@@ -147,21 +159,24 @@ import seaborn as sns
 - Descriptive statistics
 - Trend and relationship analysis
 
-**Python**
+### Python
+
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
 - Jupyter Notebook
 
-**Data Visualization**
+### Data Visualization
+
 - Histograms
 - Bar charts
 - Line charts
 - Scatter plots
 - Distribution analysis
 
-**Analytical Skills**
+### Analytical Skills
+
 - Problem formulation
 - Pattern identification
 - Trend analysis
@@ -202,7 +217,5 @@ The project was developed as a practical exercise in applying Python-based data 
 B.Tech Manufacturing Engineering | COEP Technological University
 
 Interested in **Data Analytics, Business Analytics, Supply Chain, and Business/Strategy roles**.
-
----
 
 *This project was created to demonstrate practical data-analysis skills using Python and publicly available IMDb movie data.*
